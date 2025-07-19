@@ -354,23 +354,103 @@ function showLoopCompletion() {
     const nextLoop = getNextLoop();
     
     contentDisplay.innerHTML = `
-        <div class="completion-content">
-            <h3>🌱 Loop Complete: ${currentLoopName}</h3>
-            <p><strong>Your Final Score: ${totalScore} points</strong></p>
-            
-            <div class="belief-analysis">
-                <h4>Your Origin Leanings:</h4>
-                <ul>
-                    <li>Creation Conviction: ${creationScore} points</li>
-                    <li>Evolution Conviction: ${evolutionScore} points</li>
-                </ul>
-            </div>
-            
-            <div class="journey-complete">
-                <h4>🌌 Origin Exploration Complete!</h4>
-                <p>You have explored this aspect of the creation vs evolution mystery.</p>
-                <p>The Engine appreciates your thoughtful engagement with these origin questions.</p>
-            </div>
+    <style>
+    /* FRONTIER Hub Navigation Styles for Origin Loops */
+    .origin-completion-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 30px 0;
+        align-items: center;
+    }
+    
+    .origin-begin-again-btn {
+        background: linear-gradient(45deg, #d4af37, #b8860b);
+        color: #2c1810;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .origin-begin-again-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    }
+    
+    .origin-explore-all-loops {
+        display: inline-block;
+        background: linear-gradient(45deg, #FFD700, #FFA500);
+        color: #1a1a2e;
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    
+    .origin-explore-all-loops:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+        text-decoration: none;
+        color: #1a1a2e;
+    }
+    
+    .origin-frontier-motto {
+        margin-top: 30px;
+        padding: 20px;
+        background: rgba(212, 175, 55, 0.1);
+        border-radius: 15px;
+        border: 2px solid rgba(212, 175, 55, 0.3);
+    }
+    
+    .origin-frontier-motto p {
+        color: #d4af37;
+        font-style: italic;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+    }
+    </style>
+    
+    <div class="completion-content">
+        <h3>🌱 Loop Complete: ${currentLoopName}</h3>
+        <p><strong>Your Final Score: ${totalScore} points</strong></p>
+        
+        <div class="belief-analysis">
+            <h4>Your Origin Leanings:</h4>
+            <ul>
+                <li>Creation Conviction: ${creationScore} points</li>
+                <li>Evolution Conviction: ${evolutionScore} points</li>
+            </ul>
+        </div>
+        
+        <div class="journey-complete">
+            <h4>🌌 Origin Exploration Complete!</h4>
+            <p>You have explored this aspect of the creation vs evolution mystery.</p>
+            <p>The Engine appreciates your thoughtful engagement with these origin questions.</p>
+        </div>
+        
+        <div class="origin-completion-actions">
+            <button onclick="window.location.href='index.html'" class="origin-begin-again-btn">🌱 Explore Origins Again</button>
+            <a href="https://unity-loops.com/hub" class="origin-explore-all-loops">
+                🏛️ Explore All 6 Consciousness Loops
+            </a>
+        </div>
+        
+        <div class="origin-frontier-motto">
+            <p>"It's Loops All the Way Down"</p>
+        </div>
             
             <div class="navigation-buttons" style="margin-top: 30px; text-align: center;">
                 <button onclick="window.location.href='index.html'" class="nav-button" style="margin: 10px; padding: 12px 24px; background: rgba(255,255,255,0.2); color: #2C3E50; border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; cursor: pointer;">← Return to Engine</button>
