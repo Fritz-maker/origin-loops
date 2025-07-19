@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❓ Loop 6.6: The Question Itself - Origin Loops</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="loop-header">
+            <div class="loop-identifier">
+                <span class="loop-number">LOOP 6.6</span>
+                <h1 class="loop-title">❓ THE QUESTION ITSELF</h1>
+                <p class="loop-subtitle">This Moment Scale (right now)</p>
+            </div>
+            
+            <div class="central-question">
+                "Why do we ask origin questions? Was this inquiry predetermined or freely chosen?"
+            </div>
+            
+            <div class="strange-loop-reminder">
+                <strong>Strange Loop:</strong> "The questioner questioning the origin of questioning"
+            </div>
+        </header>
+
+        <!-- Perspective Selection -->
+        <div id="preference-selection" class="perspective-selection">
+            <h2>Choose Your Questioning Perspective</h2>
+            <p class="perspective-prompt">How do you approach the mystery of inquiry itself?</p>
+            
+            <div class="preference-buttons">
+                <button id="choose-left" class="perspective-btn left-perspective">
+                    <div class="perspective-icon">🎯</div>
+                    <h3>Divinely-Inspired Inquiry</h3>
+                    <p>I believe our capacity to ask origin questions reflects divine image or supernatural endowment - consciousness seeking its divine source through questioning.</p>
+                    <div class="perspective-detail">Divine → Mind → Questions</div>
+                </button>
+                
+                <button id="choose-right" class="perspective-btn right-perspective">
+                    <div class="perspective-icon">🧠</div>
+                    <h3>Evolved Curiosity</h3>
+                    <p>I see human questioning and wonder as naturally evolved cognitive capacities that provided survival advantages to our ancestors through environmental exploration.</p>
+                    <div class="perspective-detail">Evolution → Brain → Curiosity</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <div id="content-display" class="content-display">
+                <div class="welcome-message">
+                    <h3>❓ Welcome to The Question Itself</h3>
+                    <p>You are about to explore the ultimate recursion: questioning the origin of questioning while questioning questioning itself.</p>
+                    <p><strong>Choose your questioning perspective above to begin this meta-inquiry.</strong></p>
+                </div>
+            </div>
+            
+            <div id="engine-commentary" class="engine-commentary">
+                <p><em>The Engine awaits your questioning perspective choice to begin the ultimate loop: inquiry investigating inquiry...</em></p>
+            </div>
+            
+            <button id="next-button" class="next-button" disabled>
+                Explore the Next Angle
+            </button>
+        </main>
+
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <div class="score-display">
+                <span>Origin Score: </span>
+                <span id="current-score">0</span>
+            </div>
+            <div id="progress-indicator" class="progress-indicator">
+                The Question Itself: Awaiting perspective selection
+            </div>
+            <div id="unlock-status" class="unlock-status">
+                Final Loop - Complete the Journey
+            </div>
+        </div>
+
+        <!-- Footer Navigation -->
+        <footer class="loop-footer">
+            <a href="index.html" class="footer-link">← Return to Origin Loops</a>
+            <span class="loop-position">Loop 6.6 of 6 - The Ultimate Recursion</span>
+            <span class="next-loop">🌱 Journey Complete</span>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/game_logic.js"></script>
+    <script src="content/question_itself_content.js"></script>
+</body>
+</html>

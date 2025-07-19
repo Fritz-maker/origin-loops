@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧬 Loop 6.2: Life's Spark - Origin Loops</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="loop-header">
+            <div class="loop-identifier">
+                <span class="loop-number">LOOP 6.2</span>
+                <h1 class="loop-title">🧬 LIFE'S SPARK</h1>
+                <p class="loop-subtitle">Life Scale (4 billion years ago → now)</p>
+            </div>
+            
+            <div class="central-question">
+                "Did life require a divine spark, or did chemistry become biology through natural processes?"
+            </div>
+            
+            <div class="strange-loop-reminder">
+                <strong>Strange Loop:</strong> "Living molecules studying how non-living matter became alive"
+            </div>
+        </header>
+
+        <!-- Perspective Selection -->
+        <div id="preference-selection" class="perspective-selection">
+            <h2>Choose Your Life Perspective</h2>
+            <p class="perspective-prompt">How do you approach the mystery of life's emergence?</p>
+            
+            <div class="preference-buttons">
+                <button id="choose-left" class="perspective-btn left-perspective">
+                    <div class="perspective-icon">✨</div>
+                    <h3>Divine Spark</h3>
+                    <p>I believe life required a special creative act or divine intervention to bridge the impossible gap from non-living matter to living organisms.</p>
+                    <div class="perspective-detail">Spirit → Matter → Life</div>
+                </button>
+                
+                <button id="choose-right" class="perspective-btn right-perspective">
+                    <div class="perspective-icon">🧪</div>
+                    <h3>Chemical Evolution</h3>
+                    <p>I see life emerging naturally from chemical processes, with abiogenesis occurring through natural selection acting on molecular replicators.</p>
+                    <div class="perspective-detail">Chemistry → Replication → Biology</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <div id="content-display" class="content-display">
+                <div class="welcome-message">
+                    <h3>🧬 Welcome to Life's Spark</h3>
+                    <p>You are about to explore how living matter emerged from non-living chemistry - one of existence's most profound transitions.</p>
+                    <p><strong>Choose your life perspective above to begin this vital inquiry.</strong></p>
+                </div>
+            </div>
+            
+            <div id="engine-commentary" class="engine-commentary">
+                <p><em>The Engine awaits your life perspective choice to begin analyzing living molecules contemplating their own origins...</em></p>
+            </div>
+            
+            <button id="next-button" class="next-button" disabled>
+                Explore the Next Angle
+            </button>
+        </main>
+
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <div class="score-display">
+                <span>Origin Score: </span>
+                <span id="current-score">0</span>
+            </div>
+            <div id="progress-indicator" class="progress-indicator">
+                Life's Spark: Awaiting perspective selection
+            </div>
+            <div id="unlock-status" class="unlock-status">
+                Next Loop unlocks at 50 points
+            </div>
+        </div>
+
+        <!-- Footer Navigation -->
+        <footer class="loop-footer">
+            <a href="index.html" class="footer-link">← Return to Origin Loops</a>
+            <span class="loop-position">Loop 6.2 of 6</span>
+            <span class="next-loop">Next: Mind's Dawn →</span>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/game_logic.js"></script>
+    <script src="content/lifes_spark_content.js"></script>
+</body>
+</html>

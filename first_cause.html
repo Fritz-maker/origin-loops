@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱 Loop 6.1: The First Cause ✨</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, #2c1810 0%, #4a2c2a 25%, #3d2f1f 50%, #5d4e37 75%, #8b7355 100%);
+            color: #f4f1e8;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Sacred causation spirals */
+        .causation-spiral {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border: 2px solid #d4af37;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: cause-effect 12s infinite ease-in-out;
+        }
+        
+        .causation-spiral::before {
+            content: "🌱";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            animation: growth-cycle 8s infinite ease-in-out;
+        }
+        
+        @keyframes cause-effect {
+            0%, 100% { 
+                transform: scale(1) rotate(0deg);
+                border-color: #d4af37;
+                opacity: 0.6;
+            }
+            25% { 
+                transform: scale(1.3) rotate(90deg);
+                border-color: #f4e4bc;
+                opacity: 0.8;
+            }
+            50% { 
+                transform: scale(0.7) rotate(180deg);
+                border-color: #b8860b;
+                opacity: 0.4;
+            }
+            75% { 
+                transform: scale(1.1) rotate(270deg);
+                border-color: #daa520;
+                opacity: 0.7;
+            }
+        }
+        
+        @keyframes growth-cycle {
+            0%, 100% { color: #d4af37; transform: translate(-50%, -50%) scale(1); }
+            50% { color: #f4e4bc; transform: translate(-50%, -50%) scale(1.2); }
+        }
+        
+        .origin-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .origin-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .origin-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.8em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #d4af37, #f4e4bc, #daa520);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: golden-flow 8s ease infinite;
+            margin-bottom: 15px;
+        }
+        
+        @keyframes golden-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .origin-subtitle {
+            font-size: 1.3em;
+            color: #e6d7c3;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .sacred-loop-display {
+            font-size: 1.4em;
+            color: #d4af37;
+            font-weight: 600;
+            margin: 15px 0;
+            padding: 15px;
+            border: 2px solid #d4af37;
+            border-radius: 12px;
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .mystery-emphasis {
+            background: linear-gradient(45deg, #3d2f1f, #5d4e37);
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mystery-emphasis::before {
+            content: "✨";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5em;
+            opacity: 0.7;
+        }
+        
+        .sacred-contemplation {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+            color: #f4e4bc;
+        }
+        
+        .progress-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .score-card, .progress-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .score-number {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2em;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 5px;
+        }
+        
+        .score-label {
+            color: #e6d7c3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        
+        .perspective-selection {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .perspective-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.8em;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        .perspective-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .perspective-btn {
+            padding: 20px 30px;
+            font-size: 1.1em;
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+            border: 2px solid transparent;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 250px;
+            background: rgba(212, 175, 55, 0.15);
+            color: #f4e4bc;
+        }
+        
+        .design-btn {
+            border-color: #d4af37;
+        }
+        
+        .emergence-btn {
+            border-color: #f4e4bc;
+        }
+        
+        .perspective-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .content-area {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            min-height: 400px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .question-container {
+            text-align: center;
+        }
+        
+        .question-container h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        
+        .question-text {
+            font-size: 1.2em;
+            color: #f4f1e8;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        
+        .tf-options, .mc-options {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+        
+        .answer-btn {
+            padding: 15px 25px;
+            font-size: 1em;
+            font-family: 'Crimson Text', serif;
+            font-weight: 600;
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            background: rgba(212, 175, 55, 0.1);
+            color: #f4e4bc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+        
+        .answer-btn:hover {
+            background: rgba(212, 175, 55, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .answer-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .correct-answer {
+            background: rgba(212, 175, 55, 0.4) !important;
+            border-color: #d4af37 !important;
+        }
+        
+        .incorrect-answer {
+            background: rgba(244, 228, 188, 0.2) !important;
+            border-color: #f4e4bc !important;
+        }
+        
+        .bridge-commentary {
+            background: rgba(244, 228, 188, 0.1);
+            border: 2px solid #f4e4bc;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            position: relative;
+            font-style: italic;
+            color: #f4e4bc;
+        }
+        
+        .bridge-commentary::before {
+            content: "🌉 THE BRIDGE";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #2c1810;
+            padding: 0 10px;
+            color: #f4e4bc;
+            font-weight: bold;
+            font-size: 0.9em;
+            font-style: normal;
+        }
+        
+        .next-button {
+            display: block;
+            margin: 30px auto;
+            padding: 18px 35px;
+            font-size: 1.2em;
+            font-family: 'Libre Baskerville', serif;
+            font-weight: bold;
+            background: linear-gradient(45deg, #d4af37, #b8860b);
+            color: #2c1810;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .next-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        .next-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .causation-explorer {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .explorer-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .explorer-option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .explorer-option:hover {
+            border-color: #d4af37;
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .explorer-option.selected {
+            border-color: #d4af37;
+            background: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .sacred-integration {
+            background: rgba(244, 228, 188, 0.1);
+            border: 2px solid #f4e4bc;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .origin-container {
+                padding: 15px;
+            }
+            
+            .origin-title {
+                font-size: 2.2em;
+            }
+            
+            .progress-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .perspective-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tf-options, .mc-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="origin-container">
+        <header class="origin-header">
+            <h1 class="origin-title">THE FIRST CAUSE</h1>
+            <p class="origin-subtitle">Loop 6.1: The Recursive Mystery of Causation</p>
+            <div class="sacred-loop-display">
+                "Effects investigating causes that might be effects of effects investigating causes"
+            </div>
+            <div class="causation-spiral" style="top: 20px; left: 80px;"></div>
+            <div class="causation-spiral" style="top: 60px; right: 100px; animation-delay: 4s;"></div>
+            <div class="causation-spiral" style="bottom: 30px; left: 60%; animation-delay: 8s;"></div>
+        </header>
+        
+        <div class="mystery-emphasis">
+            <h3 style="color: #d4af37; font-family: 'Libre Baskerville', serif; margin-bottom: 15px;">🌱 THE ULTIMATE CAUSAL MYSTERY</h3>
+            <p style="font-size: 1.2em; color: #f4f1e8;">
+                What caused the first cause? Every answer leads to another question, every explanation requires explanation. 
+                Perhaps the recursiveness itself points to something sacred beyond our usual ways of thinking.
+            </p>
+            <div class="sacred-contemplation">
+                "We are effects wondering about causes, using minds that arose from the very mystery we're investigating. The circle is complete and beautiful."
+            </div>
+        </div>
+        
+        <div class="progress-section">
+            <div class="score-card">
+                <div class="score-number" id="current-score">0</div>
+                <div class="score-label">Wisdom Score</div>
+            </div>
+            <div class="progress-card">
+                <div class="score-number" id="progress-indicator">Loop 6.1: 0/8</div>
+                <div class="score-label">Sacred Exploration</div>
+            </div>
+        </div>
+        
+        <div id="perspective-selection" class="perspective-selection">
+            <h3 class="perspective-title">🌿 Choose Your Sacred Perspective</h3>
+            <p style="color: #e6d7c3; margin-bottom: 25px; text-align: center;">
+                How do you approach the mystery of first causes? Both perspectives honor the ultimate wonder of existence.
+            </p>
+            <div class="perspective-buttons">
+                <button id="choose-left" class="perspective-btn design-btn">
+                    <strong>🎨 SACRED DESIGN</strong><br>
+                    <span style="font-size: 0.9em;">I see intention, purpose, and divine creativity as the source of existence. The universe bears the signature of conscious design and love.</span>
+                </button>
+                <button id="choose-right" class="perspective-btn emergence-btn">
+                    <strong>🌱 SACRED EMERGENCE</strong><br>
+                    <span style="font-size: 0.9em;">I see beauty arising spontaneously from natural processes. The universe creates itself through emergent complexity and self-organization.</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="content-area">
+            <div id="content-display">
+                <div style="text-align: center; padding: 40px; color: #e6d7c3;">
+                    <h3 style="color: #d4af37; font-family: 'Libre Baskerville', serif;">✨ Awaiting Your Sacred Choice</h3>
+                    <p>Choose your perspective above to begin exploring the first cause mystery with grace and wonder.</p>
+                    <div style="margin: 20px 0; font-style: italic;">
+                        <em>"The first question which you will ask is: What caused God? If you can settle that question, you will settle the question of whether there is a God or not."</em><br>
+                        — Charles Darwin, recognizing the beautiful recursiveness
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bridge-commentary">
+            <div id="bridge-commentary">
+                <p><em>The Bridge awaits: Ready to explore how causation examines its own mysterious origins with reverence and wonder...</em></p>
+            </div>
+        </div>
+        
+        <button id="next-button" class="next-button" disabled>
+            🌱 Continue the Sacred Inquiry ✨
+        </button>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="index.html" style="color: #d4af37; text-decoration: none; padding: 10px 20px; border: 1px solid #d4af37; border-radius: 8px; transition: all 0.3s ease;">
+                ← Return to Origin Loops
+            </a>
+        </div>
+        
+        <div style="text-align: center; margin: 40px 0; color: #a0856b; font-style: italic;">
+            <p>"Maybe the real first cause was the capacity for wonder we discovered along the way... while using that very capacity to investigate its own origins."</p>
+        </div>
+    </div>
+    
+    <script>
+        // Causation exploration functions
+        function createCausationExplorer(content) {
+            return `
+                <div class="causation-explorer">
+                    <h3>🌱 Causation Explorer</h3>
+                    <p>${content.description}</p>
+                    <p style="color: #f4e4bc; margin: 15px 0;">
+                        What perspective feels most true to your understanding of how existence began?
+                    </p>
+                    <div class="explorer-options">
+                        <div class="explorer-option" onclick="selectCause('infinite', ${content.value}, '${content.stance}')">
+                            <strong>♾️ Infinite Regress</strong><br>
+                            <small>Every cause has a cause, infinitely</small>
+                        </div>
+                        <div class="explorer-option" onclick="selectCause('uncaused', ${content.value}, '${content.stance}')">
+                            <strong>✨ Uncaused Cause</strong><br>
+                            <small>Something exists without needing a cause</small>
+                        </div>
+                        <div class="explorer-option" onclick="selectCause('circular', ${content.value}, '${content.stance}')">
+                            <strong>🌀 Circular Causation</strong><br>
+                            <small>Reality causes itself in mysterious loops</small>
+                        </div>
+                        <div class="explorer-option" onclick="selectCause('beyond', ${content.value}, '${content.stance}')">
+                            <strong>🌌 Beyond Causation</strong><br>
+                            <small>Existence transcends cause and effect</small>
+                        </div>
+                    </div>
+                    <div id="cause-result" style="margin-top: 20px;"></div>
+                </div>
+            `;
+        }
+        
+        function selectCause(causeType, value, stance) {
+            document.querySelectorAll('.explorer-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            event.target.classList.add('selected');
+            
+            const responses = {
+                infinite: "Infinite regress chosen! You sense that the chain of causation might extend eternally backward, each cause having its own cause. This points to existence being fundamentally mysterious - if every cause needs a cause, then causation itself becomes an infinite wonder worthy of reverence.",
+                uncaused: "Uncaused cause selected! You recognize that something must exist without needing a prior cause - whether God, quantum fields, or consciousness itself. This mysterious self-existence is perhaps the most sacred aspect of reality - something so fundamental it needs no explanation beyond itself.",
+                circular: "Circular causation chosen! You see reality as self-creating in recursive loops - effects that become their own causes. Like consciousness arising from matter that was organized by consciousness, the universe might be beautifully self-generating in ways that transcend linear thinking.",
+                beyond: "Beyond causation selected! You sense that ultimate reality transcends our categories of cause and effect entirely. Perhaps existence simply IS, beyond all our questions about how or why. This points to a mystery so profound that even the question dissolves into pure wonder."
+            };
+            
+            document.getElementById('cause-result').innerHTML = `
+                <div style="background: rgba(212, 175, 55, 0.2); border-radius: 10px; padding: 20px; text-align: center;">
+                    <h4 style="color: #d4af37; margin-bottom: 10px;">Your Causal Insight:</h4>
+                    <p style="color: #f4e4bc;">${responses[causeType]}</p>
+                    <p style="color: #d4af37; margin-top: 15px; font-weight: bold;">+${value} Sacred Wisdom Points</p>
+                </div>
+            `;
+            
+            updateScores(value, stance);
+            document.getElementById('next-button').disabled = false;
+        }
+        
+        // Sacred integration function
+        function createSacredIntegration(content) {
+            return `
+                <div class="sacred-integration">
+                    <h3>🌉 Sacred Integration</h3>
+                    <p>${content.description}</p>
+                    <p style="color: #f4e4bc; margin: 15px 0;">
+                        How might different wisdom traditions complement each other in approaching first causes?
+                    </p>
+                    <div class="explorer-options">
+                        <div class="explorer-option" onclick="selectIntegration('complementary', ${content.value}, '${content.stance}')">
+                            <strong>🤝 Complementary Wisdom</strong><br>
+                            <small>Divine creation provides 'who,' science provides 'how'</small>
+                        </div>
+                        <div class="explorer-option" onclick="selectIntegration('mystery', ${content.value}, '${content.stance}')">
+                            <strong>🌌 All Point to Mystery</strong><br>
+                            <small>All origin stories point to the same ultimate mystery</small>
+                        </div>
+                        <div class="explorer-option" onclick="selectIntegration('facets', ${content.value}, '${content.stance}')">
+                            <strong>💎 Different Facets</strong><br>
+                            <small>Different perspectives reveal different aspects of one reality</small>
+                        </div>
+                        <div class="explorer-option" onclick="selectIntegration('question', ${content.value}, '${content.stance}')">
+                            <strong>❓ Question Over Answer</strong><br>
+                            <small>The question itself is more important than any specific answer</small>
+                        </div>
+                    </div>
+                    <div id="integration-result" style="margin-top: 20px;"></div>
+                </div>
+            `;
+        }
+        
+        function selectIntegration(integrationType, value, stance) {
+            document.querySelectorAll('.explorer-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            event.target.classList.add('selected');
+            
+            const responses = {
+                complementary: "Complementary wisdom chosen! You see divine creation and natural processes as partners rather than competitors. Perhaps God works through evolution, or consciousness emerges through sacred natural laws. Different approaches can dance together in exploring the mystery.",
+                mystery: "All point to mystery! You recognize that beneath all our different explanations lies the same fundamental wonder: that anything exists at all. Whether we call it God, quantum fields, or Brahman, we're all pointing toward the same ultimate mystery with different words.",
+                facets: "Different facets selected! Like light appearing as both wave and particle, ultimate reality might be too rich to capture from any single perspective. Creation and evolution, design and emergence, might all be partial glimpses of something too beautiful for any one viewpoint.",
+                question: "Question over answer! You see the capacity to ask about origins as more miraculous than any specific explanation. The fact that the universe has produced beings capable of wondering about their own beginnings is itself the most profound mystery worth celebrating."
+            };
+            
+            document.getElementById('integration-result').innerHTML = `
+                <div style="background: rgba(244, 228, 188, 0.2); border-radius: 10px; padding: 20px; text-align: center;">
+                    <h4 style="color: #f4e4bc; margin-bottom: 10px;">Your Integration Wisdom:</h4>
+                    <p style="color: #f4e4bc;">${responses[integrationType]}</p>
+                    <p style="color: #d4af37; margin-top: 15px; font-weight: bold;">+${value} Integration Points</p>
+                </div>
+            `;
+            
+            updateScores(value, stance);
+            document.getElementById('next-button').disabled = false;
+        }
+        
+        // Gentle cosmic wisdom on title click
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.origin-title').addEventListener('click', function() {
+                const causationWisdom = [
+                    "Maybe the question 'What caused the first cause?' is the universe's way of marveling at its own existence",
+                    "Every attempt to explain existence uses existence - the ultimate gift of self-reflection",
+                    "Perhaps asking about first causes is consciousness celebrating that it exists at all",
+                    "The recursive mystery of causation might be existence's way of expressing wonder at itself"
+                ];
+                
+                const wisdom = causationWisdom[Math.floor(Math.random() * causationWisdom.length)];
+                alert(`✨ FIRST CAUSE WISDOM 🌱\n\n"${wisdom}"\n\n— The Sacred Mystery celebrating its own contemplation`);
+            });
+        });
+    </script>
+    <script src="content/first_cause_content.js"></script>
+    <script src="js/origin_game_logic.js"></script>
+</body>
+</html>

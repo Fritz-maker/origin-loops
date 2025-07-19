@@ -1,0 +1,504 @@
+/* 🌱 ORIGIN LOOPS - COSMIC GENESIS STYLING ✨ */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background: linear-gradient(135deg, #2c1810 0%, #4a2c2a 25%, #3d2f1f 50%, #5d4e37 75%, #8b7355 100%);
+    color: #f4f1e8;
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Header Styling */
+.loop-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.loop-identifier {
+    margin-bottom: 30px;
+}
+
+.loop-number {
+    display: block;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.2em;
+    color: #d4af37;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.loop-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3em;
+    font-weight: 700;
+    background: linear-gradient(45deg, #d4af37, #f4e4bc, #daa520, #b8860b);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: golden-flow 8s ease infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes golden-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.loop-subtitle {
+    font-size: 1.2em;
+    color: #e6d7c3;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.central-question {
+    font-size: 1.4em;
+    color: #d4af37;
+    font-weight: 600;
+    margin: 25px 0;
+    padding: 20px;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.strange-loop-reminder {
+    background: rgba(212, 175, 55, 0.15);
+    border-left: 4px solid #d4af37;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-style: italic;
+    color: #f4e4bc;
+}
+
+/* Perspective Selection */
+.perspective-selection {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.perspective-selection h2 {
+    font-family: 'Libre Baskerville', serif;
+    color: #d4af37;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.perspective-prompt {
+    color: #e6d7c3;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.preference-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.perspective-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    color: #f4f1e8;
+    font-family: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.perspective-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(45deg, #d4af37, #f4e4bc, #b8860b, #daa520);
+    background-size: 400% 400%;
+    animation: border-flow 10s ease infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+@keyframes border-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.perspective-btn:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+}
+
+.perspective-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.perspective-btn h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: #f4e4bc;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.perspective-btn p {
+    color: #e6d7c3;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.perspective-detail {
+    color: #d4af37;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Content Area */
+.content-area {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.content-display {
+    min-height: 300px;
+    margin-bottom: 30px;
+}
+
+.welcome-message {
+    text-align: center;
+    padding: 40px;
+}
+
+.welcome-message h3 {
+    color: #d4af37;
+    margin-bottom: 20px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.perspective-intro {
+    background: rgba(212, 175, 55, 0.1);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Question Styling */
+.question-content {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.question-content h3 {
+    color: #d4af37;
+    margin-bottom: 20px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.question-text {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #f4e4bc;
+}
+
+.answer-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.answer-btn {
+    background: linear-gradient(45deg, #d4af37, #b8860b);
+    color: #2c1810;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.answer-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.answer-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Feedback Styling */
+.correct-feedback, .incorrect-feedback {
+    background: rgba(212, 175, 55, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 4px solid #d4af37;
+}
+
+.points-earned {
+    color: #d4af37;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Factoid Content */
+.factoid-content {
+    background: rgba(244, 228, 188, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    border-left: 4px solid #f4e4bc;
+}
+
+.factoid-content h3 {
+    color: #f4e4bc;
+    margin-bottom: 15px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.factoid-text {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.content-value {
+    color: #d4af37;
+    font-weight: 600;
+}
+
+/* Video Content */
+.video-content {
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin: 20px 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Engine Commentary */
+.engine-commentary {
+    background: rgba(212, 175, 55, 0.15);
+    border-left: 4px solid #d4af37;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-style: italic;
+    color: #f4e4bc;
+}
+
+/* Next Button */
+.next-button {
+    background: linear-gradient(45deg, #d4af37, #b8860b);
+    color: #2c1810;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 30px auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.next-button:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+}
+
+.next-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Progress Section */
+.progress-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.score-display {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.progress-indicator {
+    color: #e6d7c3;
+}
+
+.unlock-status {
+    color: #a0856b;
+    font-style: italic;
+}
+
+/* Footer */
+.loop-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    color: #a0856b;
+}
+
+.footer-link {
+    color: #d4af37;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #f4e4bc;
+}
+
+/* Completion Content */
+.completion-content {
+    text-align: center;
+    padding: 30px;
+}
+
+.belief-analysis {
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.belief-analysis ul {
+    list-style: none;
+    padding: 0;
+}
+
+.belief-analysis li {
+    margin: 10px 0;
+    color: #f4e4bc;
+}
+
+.journey-complete {
+    background: rgba(244, 228, 188, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.navigation-buttons {
+    margin-top: 30px;
+}
+
+.nav-button {
+    margin: 10px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .loop-title {
+        font-size: 2.2em;
+    }
+    
+    .preference-buttons {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .answer-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .progress-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .loop-footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

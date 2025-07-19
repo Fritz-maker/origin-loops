@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱 ORIGIN LOOPS: Creation vs Evolution ✨</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, #2c1810 0%, #4a2c2a 25%, #3d2f1f 50%, #5d4e37 75%, #8b7355 100%);
+            color: #f4f1e8;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Sacred geometry background */
+        .sacred-geometry {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .geometry-circle {
+            position: absolute;
+            border: 1px solid #d4af37;
+            border-radius: 50%;
+            animation: sacred-rotate 30s infinite linear;
+        }
+        
+        @keyframes sacred-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .origin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .origin-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .origin-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #d4af37, #f4e4bc, #daa520, #b8860b);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: golden-flow 8s ease infinite;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        @keyframes golden-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .origin-subtitle {
+            font-size: 1.4em;
+            color: #e6d7c3;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .central-mystery {
+            font-size: 1.6em;
+            color: #d4af37;
+            font-weight: 600;
+            margin: 25px 0;
+            text-align: center;
+            padding: 25px;
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+        }
+        
+        .loops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .origin-loop {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 30px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .origin-loop::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(45deg, #d4af37, #f4e4bc, #b8860b, #daa520);
+            background-size: 400% 400%;
+            animation: border-flow 10s ease infinite;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+        
+        @keyframes border-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .origin-loop:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+        }
+        
+        .loop-number {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.2em;
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .loop-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.8em;
+            color: #f4e4bc;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .loop-scale {
+            color: #d4af37;
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .loop-description {
+            color: #e6d7c3;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        
+        .strange-loop {
+            background: rgba(212, 175, 55, 0.15);
+            border-left: 4px solid #d4af37;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-style: italic;
+            color: #f4e4bc;
+        }
+        
+        .tension-focus {
+            background: rgba(244, 228, 188, 0.15);
+            border-left: 4px solid #f4e4bc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            color: #f4e4bc;
+            font-weight: 500;
+        }
+        
+        .wisdom-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .origin-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .stat-number {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #e6d7c3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        
+        .ultimate-mystery {
+            background: rgba(212, 175, 55, 0.2);
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .mystery-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.8em;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        .start-button {
+            background: linear-gradient(45deg, #d4af37, #b8860b);
+            color: #2c1810;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.3em;
+            font-family: 'Libre Baskerville', serif;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .start-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+        }
+        
+        .sacred-quote {
+            font-style: italic;
+            text-align: center;
+            font-size: 1.2em;
+            color: #f4e4bc;
+            margin: 30px 0;
+            padding: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .origin-title {
+                font-size: 2.5em;
+            }
+            
+            .loops-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .origin-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sacred-geometry" id="sacredGeometry"></div>
+    
+    <div class="origin-container">
+        <header class="origin-header">
+            <h1 class="origin-title">ORIGIN LOOPS</h1>
+            <p class="origin-subtitle">Creation vs Evolution - The Ultimate Strange Loop</p>
+            <div class="central-mystery">
+                "Which origin story explains how you became able to wonder about origins?"
+            </div>
+        </header>
+        
+        <div class="sacred-quote">
+            "In the beginning was the Word, and the Word was with God..."<br>
+            "In the beginning was information, and information became aware of itself..."<br>
+            "In the beginning was the question: 'How did beginning begin?'"
+        </div>
+        
+        <div class="wisdom-section">
+            <h2 style="color: #d4af37; font-family: 'Libre Baskerville', serif; margin-bottom: 20px;">🌱 THE GRACEFUL EXPLORATION</h2>
+            <p style="color: #e6d7c3; font-size: 1.2em; max-width: 800px; margin: 0 auto;">
+                These loops explore creation and evolution across six scales - from cosmic origins to this very moment of questioning. Rather than debate, we celebrate how consciousness emerged to marvel at its own existence. Whether through divine creation, natural evolution, or something beyond both - here we are, mysteriously capable of wonder itself.
+            </p>
+        </div>
+        
+        <div class="origin-stats">
+            <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Scale Levels</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">13.8B</div>
+                <div class="stat-label">Years Explored</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Recursive Depths</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">✨</div>
+                <div class="stat-label">Sacred Wonder</div>
+            </div>
+        </div>
+        
+        <div class="loops-grid">
+            <div class="origin-loop" onclick="startLoop('cosmic_genesis')">
+                <div class="loop-number">LOOP 6.1</div>
+                <div class="loop-title">🌌 Cosmic Genesis</div>
+                <div class="loop-scale">Universe Scale (13.8 billion years ago → now)</div>
+                <div class="loop-description">
+                    Was the cosmos designed with consciousness in mind, or did complexity emerge from simple laws? The universe contemplating its own fine-tuned origins through brains it may have designed or evolved.
+                </div>
+                <div class="strange-loop">
+                    <strong>Strange Loop:</strong> "The universe contemplating its own origin through brains it may have designed or evolved"
+                </div>
+                <div class="tension-focus">
+                    <strong>Central Tension:</strong> Designed cosmos vs emergent complexity
+                </div>
+            </div>
+            
+            <div class="origin-loop" onclick="startLoop('lifes_spark')">
+                <div class="loop-number">LOOP 6.2</div>
+                <div class="loop-title">🧬 Life's Spark</div>
+                <div class="loop-scale">Life Scale (4 billion years ago → now)</div>
+                <div class="loop-description">
+                    Did life require a divine spark, or did chemistry become biology through natural processes? Living molecules studying how non-living matter became mysteriously alive.
+                </div>
+                <div class="strange-loop">
+                    <strong>Strange Loop:</strong> "Living molecules studying how non-living matter became alive"
+                </div>
+                <div class="tension-focus">
+                    <strong>Central Tension:</strong> Divine spark vs chemical emergence
+                </div>
+            </div>
+            
+            <div class="origin-loop" onclick="startLoop('minds_dawn')">
+                <div class="loop-number">LOOP 6.3</div>
+                <div class="loop-title">🧠 Mind's Dawn</div>
+                <div class="loop-scale">Consciousness Scale (500 million years ago → now)</div>
+                <div class="loop-description">
+                    How did awareness arise from matter - or did matter arise from mind? Consciousness investigating its own mysterious emergence using the very thing it's trying to explain.
+                </div>
+                <div class="strange-loop">
+                    <strong>Strange Loop:</strong> "Consciousness using itself to investigate its own origins"
+                </div>
+                <div class="tension-focus">
+                    <strong>Central Tension:</strong> Soul emergence vs neural complexity
+                </div>
+            </div>
+            
+            <div class="origin-loop" onclick="startLoop('cultures_code')">
+                <div class="loop-number">LOOP 6.4</div>
+                <div class="loop-title">📚 Culture's Code</div>
+                <div class="loop-scale">Civilization Scale (70,000 years ago → now)</div>
+                <div class="loop-description">
+                    Are human achievements divinely inspired or evolutionarily adaptive? Culture questioning whether language, art, religion, and science are natural or supernatural phenomena.
+                </div>
+                <div class="strange-loop">
+                    <strong>Strange Loop:</strong> "Culture questioning whether culture is natural or supernatural"
+                </div>
+                <div class="tension-focus">
+                    <strong>Central Tension:</strong> Divinely inspired vs evolutionarily adaptive
+                </div>
+            </div>
+            
+            <div class="origin-loop" onclick="startLoop('personal_genesis')">
+                <div class="loop-number">LOOP 6.5</div>
+                <div class="loop-title">👶 Personal Genesis</div>
+                <div class="loop-scale">Individual Scale (conception → present)</div>
+                <div class="loop-description">
+                    Are you a unique soul or a biological process? The developed person investigating their own development - from fertilization to the personality capable of wondering about itself.
+                </div>
+                <div class="strange-loop">
+                    <strong>Strange Loop:</strong> "The developed person investigating their own development"
+                </div>
+                <div class="tension-focus">
+                    <strong>Central Tension:</strong> Unique soul vs biological process
+                </div>
+            </div>
+            
+            <div class="origin-loop" onclick="startLoop('question_itself')">
+                <div class="loop-number">LOOP 6.6</div>
+                <div class="loop-title">❓ The Question Itself</div>
+                <div class="loop-scale">This Moment Scale (right now)</div>
+                <div class="loop-description">
+                    Why do we ask origin questions? Was this inquiry predetermined or freely chosen? The questioner questioning the origin of questioning in the ultimate recursive loop.
+                </div>
+                <div class="strange-loop">
+                    <strong>Strange Loop:</strong> "The questioner questioning the origin of questioning"
+                </div>
+                <div class="tension-focus">
+                    <strong>Central Tension:</strong> Predetermined inquiry vs free exploration
+                </div>
+            </div>
+        </div>
+        
+        <div class="ultimate-mystery">
+            <div class="mystery-title">🌀 THE ULTIMATE ORIGIN MYSTERY</div>
+            <p style="color: #f4e4bc; font-size: 1.3em; font-style: italic; margin-bottom: 20px;">
+                "How did the capacity to ask 'How did anything begin?' itself begin?"
+            </p>
+            <p style="color: #e6d7c3; margin-top: 15px;">
+                Every question about origins is consciousness marveling at its own existence. Whether we emerged through creation, evolution, or something beyond both categories - here we are, mysteriously capable of wonder itself. That is the ultimate miracle worth celebrating across all scales of existence.
+            </p>
+        </div>
+        
+        <button class="start-button" onclick="startOriginJourney()">
+            🌱 Begin the Cosmic Journey ✨
+        </button>
+        
+        <div style="text-align: center; margin: 40px 0; color: #a0856b; font-style: italic;">
+            <p>"The most beautiful thing we can experience is the mysterious. It is the source of all true art and science."</p>
+            <p style="margin-top: 10px;">— Albert Einstein</p>
+        </div>
+    </div>
+    
+    <script>
+        // Create sacred geometry background
+        function createSacredGeometry() {
+            const geometry = document.getElementById('sacredGeometry');
+            const numCircles = 12;
+            
+            for (let i = 0; i < numCircles; i++) {
+                const circle = document.createElement('div');
+                circle.className = 'geometry-circle';
+                
+                const size = 100 + Math.random() * 300;
+                circle.style.width = size + 'px';
+                circle.style.height = size + 'px';
+                circle.style.left = Math.random() * 100 + '%';
+                circle.style.top = Math.random() * 100 + '%';
+                circle.style.animationDelay = Math.random() * 30 + 's';
+                circle.style.animationDuration = (20 + Math.random() * 20) + 's';
+                
+                geometry.appendChild(circle);
+            }
+        }
+        
+        // Start specific origin loop - FIXED TO NAVIGATE PROPERLY
+        function startLoop(loopName) {
+            window.location.href = loopName + '.html';
+        }
+        
+        // Start the origin journey
+        function startOriginJourney() {
+            startLoop('cosmic_genesis');
+        }
+        
+        // Add gentle interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            createSacredGeometry();
+            
+            // Add hover effects to origin loops
+            const loops = document.querySelectorAll('.origin-loop');
+            loops.forEach(loop => {
+                loop.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 25px 50px rgba(212, 175, 55, 0.4)';
+                });
+                
+                loop.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = 'none';
+                });
+            });
+            
+            // Sacred wisdom on title click
+            document.querySelector('.origin-title').addEventListener('click', function() {
+                const originWisdom = [
+                    "Maybe creation and evolution are both love letters the universe writes to itself",
+                    "The fact that we can wonder about wonder is more miraculous than any answer we might find",
+                    "Every atom in your body was forged in the heart of a dying star - you are made of cosmic genesis",
+                    "Consciousness investigating consciousness is the ultimate strange loop of existence",
+                    "Whether designed or emergent, the universe became capable of marveling at its own beauty"
+                ];
+                
+                const wisdom = originWisdom[Math.floor(Math.random() * originWisdom.length)];
+                alert(`✨ COSMIC WISDOM 🌌\n\n"${wisdom}"\n\n— The Universe contemplating itself through you`);
+            });
+        });
+    </script>
+</body>
+</html>
